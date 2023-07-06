@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post page</title>
+    <!--Style sheet -->
+    <link rel="stylesheet" href="myStyle.css"> 
+    <!--used Boxicons CSS link for styling/icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- This is only a display page, functionality is not enabled-->
+    <body> 
+  <header>
+    <div class="nav container">
+        <!--Logo-->
+        <a href="#" class="logo">Bucket <span>List</span></a>
+        <!--Changed Login button to Saved Articles link-->
+        <a href="save-later.html" class="save-later">Saved Articles</a>
+    </div>
+    </header>
+
+    <!--Post header-->
+    <section class="post-header">
+        <div class="header-content post-container">
+            <!--Back to home option-->
+            <a href="index.html" class="back-home">Back to Home</a>
+            <!--Title-->
+            <h1 class="header-title">Lorem ipsum dolor sit amet <span style="color: var(--second-color);">Consectetur</span></h1>
+            <!--Post image-->
+            <img src="https://blog-6aa0.kxcdn.com/wp-content/uploads/2022/06/Moraine-Lake.jpg" 
+            alt="Image of travel destination"  class="header-img">
+        </div>
+    </section>
+
+    <!--Post-->
+    <section class="post-content post-container">
+        <h2 class="sub-heading">Consectetur adipiscing elit, sed do eiusmod tempor!</h2>
+        <p class="post-text">
+          Amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <br>
+        <br>
+        Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+         </p>
+
+        <h2 class="sub-heading"> Incididunt ut labore et dolore magna aliqua.</h2>
+
+        
+               <ul class="post-text list-items">
+                <li>Labore et dolore magna <b>Aliqua</b>.</li>
+                <li>Ut enim ad minim veniam, quis nostrud, Ut enim ad <b>minim veniam</b>.</li>
+                <li>Quis <b>nostrud exercitation</b> ullamco laboris nisi.</li>
+                <li>Ex ea commodo <b>consequat</b>.</li>
+               </ul> 
+        
+    </section>
+
+    <!--Table sections-->
+
+    <div class="post-container table-contents">
+        <table class="post-text">
+            <tr>
+              <th>Places to vist</th>
+              <th>Info</th>
+            </tr>
+            <tr>
+              <td>minim veniam</td>
+              <td><a target="_blank" href="#" class="link">Link</a></td>
+            </tr>
+            <tr>
+              <td>consequat</td>
+              <td><a target="_blank" href="#" class="link">Link</a></td>
+            </tr>
+            <tr>
+              <td>Nostrud exercitation</td>
+              <td><a target="_blank" href="#" class="link">Link</a></td>
+            </tr>
+          </table>
+        </div>
+
+    <!--About author section-->
+
+    <aside class="extra-info post-container">
+        <details>
+          <summary class="profile">
+            <img src="https://e7.pngegg.com/pngimages/323/376/png-clipart-woman-s-face-silhouette-illustration-computer-icons-hairstyle-hair-care-women-hair-face-people.png" alt="" class="profile-image">
+              <span class="profile-name">About the author</span>
+          </summary>
+            <!--Link to author's page-->
+          <a target="_blank" href="#" class="author-link">Linda | @Linda_on_The_Move</a>
+          <!--Quote from author-->
+          <p class="quote post-text">
+            "Agna aliqua. Ut enim ad minim veniam..." 
+          </p>
+        </details>
+      </aside>
+
+      <!-- <div class="alert"></div> -->
+
+    <!--Share section-->
+    <div class="share post-container">
+        <span class="share-title">Share or Like article</span>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+             <a href="#"><i class='bx bxl-twitter'></i></a>
+             <a href="#"><i class='bx bxl-instagram'></i></a>
+             <a href="#"><i class='bx bxl-linkedin'></i> </a>
+             <!-- Like icon added below with functionality -->
+             <a href="#" class="like-button"><i class='bx bx-like'></i></a> 
+         </div>
+    </div>
+
+    <!-- Comment section-->
+    <div class="comment post-container">
+      <form style="display: grid; max-width: 100%" id="comment-form">
+        <label for="commentInput">Leave us a comment:</label>
+        <input type="text" name="comment" id="commentInput">
+        <!-- After clicking button, comment is added to an array and sessionStorage in JS -->
+      </form>
+      <button id="comment-submit">Submit</button>
+    </div>
+    <br>
+    <!-- Previous comments are stored in below div tag -->
+    <aside class="post-container">
+      <details>
+        <summary class="profile-name"><span>Comments</span><span id="comm-total" style="padding-left:50px;">0</span></summary>
+        <!-- Previous comments will be stored in below div tag from session storage -->
+        <div id="saved-comments"></div>
+      </details>
+    </aside>
+    <br>
+    <!--Subscribe form-->
+    <div class="subscribe-form post-container">
+        <label for="exampleInputEmail1">Subscribe to our newsletter</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer container">
+      <p>Copyright details etc</p>
+      <a href="about-us.html" class="about-us">
+         <p>About Us</p>
+      </a>
+      <!--Social media icons/links retrieved from Boxicons-->
+      <div class="social">
+         <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i> </a>
+      </div>
+  </div>
+  <script src="blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us page</title>
+    <!--Style sheet -->
+    <link rel="stylesheet" href="myStyle.css"> 
+    <!--used Boxicons CSS link for styling/icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+
+    <header>
+        <div class="nav container">
+            <!--Logo-->
+            <a href="#" class="logo">Bucket <span>List</span></a>
+            <!--Changed Login button to Saved Articles link-->
+            <a href="save-later.html" class="save-later">Saved Articles</a>
+        </div>
+        </header>
+
+    <!--Post header-->
+    <section class="post-header" style="height: 20rem;">
+        <div class="header-content post-container">
+            <!--Back to home option-->
+            <a href="index.html" class="back-home">Back to Home</a>
+            <!--Title-->
+            <h1 class="header-title">The Bucket List Team</h1>
+            <h2 style="color: white;">Contact us</h2>
+        </div>
+    </section>
+              
+    <!--Contact details-->
+    <section class="post-container">
+        <h3 class="sub-heading">Telephone</h3>
+        <p class="post-text">081 888 8888</p>
+        <h3 class="sub-heading">Email</h3>
+        <p class="post-text">BLSupport@bucketlist.com</p>
+        <h3 class="sub-heading">Postal Address</h3>
+        <p class="post-text">
+            P.O. Box 0000, Edenpolo Johesburg, 1600, Republic of South Africa</p>
+
+        <!-- Below alert is made visible when user clicks submit -->
+        
+
+            <!-- Form below will allow user to send us an email -->
+        <h3 class="sub-heading">Send us an email:</h3>
+        <form style="display: grid; max-width: 30rem;" id="contact-form">
+            <label for="fullName">Full name: </label>
+            <input type="text" name="fullName" id="fullName" required>
+            <label for="emailAdress">Email address: </label>
+            <input type="text" name="emailAdress" id="emailAdress" required>
+            <label for="feedback">Feedback: </label>
+            <textarea name="feedback" id="feedback" placeholder="Your feedback is appreciated"></textarea>
+            <br>
+            <button type="button" class="btn btn-primary" style="max-width: 6rem;" onclick="addDetails()">Submit</button>
+        </form><br>
+        <div id="alertTwo"></div>
+
+        <h3 class="sub-heading">Frequently asked questions:</h3>
+        <h4 class="post-text">Lorem ipsum dolor sit amet?</h4> 
+        <p class="post-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </p>    
+            
+        <h4 class="post-text">Duis aute irure dolor in reprehenderit?</h4> 
+        <p class="post-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        
+    </section>
+
+    <!--Share section-->
+    <div class="share post-container">
+        <span class="share-title">Share this article</span>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+             <a href="#"><i class='bx bxl-twitter'></i></a>
+             <a href="#"><i class='bx bxl-instagram'></i></a>
+             <a href="#"><i class='bx bxl-linkedin'></i> </a>
+         </div>
+    </div>
+
+    <!--Subscribe form-->
+    <div class="subscribe-form post-container">
+        <label for="exampleInputEmail1">Subscribe to our newsletter</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer container">
+        <p>Copyright details etc</p>
+        <!--Social media icons/links retrieved from Boxicons-->
+        <div class="social">
+           <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i> </a>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+</body>
+</html>
+
+    <!--HTML <input type="radio">, w3Schools, Retrieved on 22 March 2023 from https://www.w3schools.com/tags/att_input_type_radio.asp
+    Travel Agency: 7 Best About us Page Templates, WordyBoy, Retrieved on 22 March 2023 from https://thewordyboy.com/travel-agency-about-us-page/ -->

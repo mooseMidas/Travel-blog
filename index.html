@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <!--Style sheet -->
+    <link rel="stylesheet" href="myStyle.css"> 
+    <!--used Boxicons CSS link for styling/icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <body>
+    <header>
+    <div class="nav container">
+        <!--Logo-->
+        <a href="#" class="logo">Bucket <span>List</span></a>
+        <!--Changed Login button to Saved Articles link-->
+        <a href="save-later.html" class="save-later">Saved Articles</a>
+    </div>
+    </header>
+
+    <!--Break header-->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title"> Bucket List</h2>
+            <span class="home-subtitle">Your travel guide to infinity and beyond</span>
+        </div>
+    </section>
+    <!--Post Filter-->
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span> <!--data-filter used to filter div elements. active-filter class defines current page-->
+        <span class="filter-item" data-filter="latest">Latest</span>
+        <span class="filter-item" data-filter="local">Local Travel</span>
+        <span class="filter-item" data-filter="international">International Travel</span>
+    </div>
+    <!-- Alert box will be displayed when displayAlert function is called -->
+    <div class="alert"></div>
+    <section class="post container">
+        <!--Post Box 1-->
+        <div class="post-box post1">
+            <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcec8b17c51ec26c49287cfbe0a7c3e6b8570f76e0bb3359c90968507f725927f1bed4d1d8e27a9d3316a884d0414411bdb40?w=1440&h=960&fit=crop&auto=enhance,format,compress&q=80" 
+            alt="Image of Leshiba Mountain Retreats" class="post-img">
+            <h2 class="category">Local Travel</h2>
+            <a href="post-page.html" class="post-title">
+                A Good Reason Why to Visit Limpopo
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">The Limpopo province covers 125,755 square kilometers and borders Mozambique, Zimbabwe, which makes Limpopo a perfect gateway to other African countries.
+            </p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://media-01.imu.nl/storage/ourplanetinmylens.com/21978/kim-paffen-africa-safari-guide-120x120.png" alt="Image of an author" class="profile-image">
+                <span class="profile-name">Kim | Our Planet in my Lens</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+             <!--Post Box 2-->
+             <div class="post-box post2">
+                <img src="https://www.hostelworld.com/blog/wp-content/uploads/2018/11/hong-kong.jpg" 
+                alt="Image of travel destination" class="post-img">
+                <h2 class="category">Latest</h2>
+                <a href="post-page-two.html" class="post-title">
+                    Lorem ipsum dolor sit amet
+                </a>
+                <span class="post-date">16 March 2023</span>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!--Profile-->
+                <div class="profile">
+                    <img src="https://www.shutterstock.com/image-vector/man-avatar-profile-male-face-260nw-471975115.jpg" alt="Silhouette Image" class="profile-image">
+                    <span class="profile-name">Mmoso Mdluli</span>
+                </div>
+                <button class="save-button">Save Article</button>
+            </div>
+
+                 <!--Post Box 3-->
+                 <div class="post-box post3">
+            <img src="https://blog-6aa0.kxcdn.com/wp-content/uploads/2022/06/Moraine-Lake.jpg" 
+            alt="Image of travel destination" class="post-img">
+            <h2 class="category">International Travel</h2>
+            <a href="post-page-three.html" class="post-title">
+                Sed do eiusmod tempor incididunt
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://e7.pngegg.com/pngimages/323/376/png-clipart-woman-s-face-silhouette-illustration-computer-icons-hairstyle-hair-care-women-hair-face-people.png" alt="Silhouette Image" class="profile-image">
+                <span class="profile-name">Linda Jones</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+
+           <!--Post Box 4-->
+           <div class="post-box post4">
+            <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcec8b17c51ec26c49287cfbe0a7c3e6b8570f76e0bb3359c90968507f725927f1bed4d1d8e27a9d3316a884d0414411bdb40?w=1440&h=960&fit=crop&auto=enhance,format,compress&q=80" 
+            alt="Image of Leshiba Mountain Retreats" class="post-img">
+            <h2 class="category">Local Travel</h2>
+            <a href="post-page.html" class="post-title">
+                A Couple of Reasons Why to Visit Limpopo
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">The Limpopo province covers 125,755 square kilometers and borders Mozambique, Zimbabwe, which makes Limpopo a perfect gateway to other African countries.
+            </p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://media-01.imu.nl/storage/ourplanetinmylens.com/21978/kim-paffen-africa-safari-guide-120x120.png" alt="Image of an author" class="profile-image">
+                <span class="profile-name">Kim | Our Planet in my Lens</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+
+             <!--Post Box 5-->
+             <div class="post-box post5">
+                <img src="https://www.hostelworld.com/blog/wp-content/uploads/2018/11/hong-kong.jpg" 
+                alt="Image of travel destination" class="post-img">
+                <h2 class="category">Latest</h2>
+                <a href="#" class="post-title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                </a>
+                <span class="post-date">16 March 2023</span>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!--Profile-->
+                <div class="profile">
+                    <img src="https://www.shutterstock.com/image-vector/man-avatar-profile-male-face-260nw-471975115.jpg" alt="Silhouette Image" class="profile-image">
+                    <span class="profile-name">Mmoso Mdluli</span>
+                </div>
+                <button class="save-button">Save Article</button>
+            </div>
+
+                 <!--Post Box 6-->
+                 <div class="post-box post6">
+            <img src="https://blog-6aa0.kxcdn.com/wp-content/uploads/2022/06/Moraine-Lake.jpg" 
+            alt="Image of travel destination" class="post-img">
+            <h2 class="category">International Travel</h2>
+            <a href="#" class="post-title">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://e7.pngegg.com/pngimages/323/376/png-clipart-woman-s-face-silhouette-illustration-computer-icons-hairstyle-hair-care-women-hair-face-people.png" alt="Image of an anime character" class="profile-image">
+                <span class="profile-name">Linda Jones</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+
+          <!--Post Box 7-->
+          <div class="post-box post7">
+            <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcec8b17c51ec26c49287cfbe0a7c3e6b8570f76e0bb3359c90968507f725927f1bed4d1d8e27a9d3316a884d0414411bdb40?w=1440&h=960&fit=crop&auto=enhance,format,compress&q=80" 
+            alt="Image of Leshiba Mountain Retreats" class="post-img">
+            <h2 class="category">Local Travel</h2>
+            <a href="post-page.html" class="post-title">
+                A Good Reason Why to Visit Limpopo
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">The Limpopo province covers 125,755 square kilometers and borders Mozambique, Zimbabwe, which makes Limpopo a perfect gateway to other African countries.
+            </p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://media-01.imu.nl/storage/ourplanetinmylens.com/21978/kim-paffen-africa-safari-guide-120x120.png" alt="Image of an author" class="profile-image">
+                <span class="profile-name">Kim | Our Planet in my Lens</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+
+             <!--Post Box 8-->
+             <div class="post-box post8">
+                <img src="https://www.hostelworld.com/blog/wp-content/uploads/2018/11/hong-kong.jpg" 
+                alt="Image of travel destination" class="post-img">
+                <h2 class="category">Latest</h2>
+                <a href="#" class="post-title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                </a>
+                <span class="post-date">16 March 2023</span>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!--Profile-->
+                <div class="profile">
+                    <img src="https://www.shutterstock.com/image-vector/man-avatar-profile-male-face-260nw-471975115.jpg" alt="Silhouette Image" class="profile-image">
+                    <span class="profile-name">Mmoso Mdluli</span>
+                </div>
+                <button class="save-button">Save Article</button>
+            </div>
+
+            <!--Post Box 9-->
+        <div class="post-box post9">
+            <img src="https://blog-6aa0.kxcdn.com/wp-content/uploads/2022/06/Moraine-Lake.jpg" 
+            alt="Image of travel destination" class="post-img">
+            <h2 class="category">International Travel</h2>
+            <a href="#" class="post-title">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </a>
+            <span class="post-date">16 March 2023</span>
+            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!--Profile-->
+            <div class="profile">
+                <img src="https://e7.pngegg.com/pngimages/323/376/png-clipart-woman-s-face-silhouette-illustration-computer-icons-hairstyle-hair-care-women-hair-face-people.png" alt="Image of an anime character" class="profile-image">
+                <span class="profile-name">Linda Jones</span>
+            </div>
+            <button class="save-button">Save Article</button>
+        </div>
+
+    </section>
+
+    <!--Subscribe form-->
+    <div class="subscribe-form container">
+        <label for="exampleInputEmail1">Subscribe to our newsletter</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer container">
+        <p>Copyright details etc</p>
+        <a href="about-us.html" class="about-us"> <!--Link to About us page-->
+           <p>About Us</p>
+        </a>
+        <!--Social media icons/links retrieved from Boxicons-->
+        <div class="social">
+           <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i> </a>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+</body>
+</html>
+
+
+<!--Most of this HTML and CSS code is based on a youtube tutorial and w3Schools definitions
+
+Create a Responsive Blog Website Using HTML CSS JavaScript And jQuery, CarpoolVenom, Retrieved on 20 March 2023 from https://www.youtube.com/watch?v=gZHjMVE_e10&t=2676s 
+Forms, Mark Otto Retrieved on 16 March 2023 from https://getbootstrap.com/docs/4.2/components/forms/
+
+-->

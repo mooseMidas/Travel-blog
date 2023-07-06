@@ -1,0 +1,615 @@
+/*Imported Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif; /*Rule to specify imported font*/
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /*Adds a smooth scrolling effect to the document*/
+    scroll-padding-top: 2rem; /*property specifies the distance from the top of the container to the snap position on the child elements.*/
+    box-sizing: border-box;
+}
+
+/*using :root selector to create variables that apply to the HTML document, helps to maintain color scheme of site */
+:root{
+    --container-color:#1a1e21;
+    --second-color: #09e73a;
+    --text-color: #020c02;
+    --bg-color: #fff;
+}
+
+.btn{ 
+    background-color:#09e73a; 
+    color: var(--text-color)
+}
+
+a{
+    text-decoration: none; /*Removing underlines from links*/
+}
+
+.alert {
+    width: 80vw;
+    margin: 2rem auto;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    position: fixed;
+    display: none;
+  }
+
+  #alertTwo {
+    width: 80vw;
+    margin: 2rem auto;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    display: none;
+  }
+
+
+img{
+    width: 100%; /*using responsive units so img always fits container*/
+}
+
+section{
+    padding: 3rem 0 2rem;
+}
+
+/*Header section*/
+
+header{
+    position: fixed; /*Header fixed when scrolling down*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200; /*Using z-index to ensure elements in header are always positioned on top of other elements*/
+}
+
+.container{
+    max-width: 1068px; /*Based on a large desktop*/
+    margin: auto;
+    width: 100%;
+}
+
+/*Added new class with same properties as above class*/
+.saved-container{
+    max-width: 1068px; /*Based on a large desktop*/
+    margin: auto;
+    width: 100%;
+}
+
+
+.nav{
+    display: flex; /*Used flex display for a responsive approach*/
+    align-items: center;
+    justify-content: space-between; /*property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).*/
+    padding: 18px;
+    border-radius: 4px; 
+    background-color: rgba(34, 37, 34, 0.3) /*shorthand for transparent background with 30% opacity*/
+}
+/* CSS Opacity / Transparency, w3schools, Retrieved on 20 March 2023 from https://www.w3schools.com/css/css_image_transparency.asp */
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+.logo span{
+    color: var(--second-color);
+}
+
+/* Updated login to save-later */
+
+.save-later{
+    padding: 8px 14px;
+    text-transform: uppercase; /*Turned text to uppercase*/
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: var(--second-color); /*Used color variable to change background*/ 
+    color: var(--bg-color); /*Used color variable to change text color*/
+}
+
+.save-later:hover {
+    background: hsl(117, 95%, 14%); /*Color is specified using HSL shorthand = hue, saturation, and lightness*/
+    transition: 0.3s; /*combined background and transition selectors to make save-later button responsive when hovering over it*/
+}
+
+
+/*Break header*/
+
+
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Cliffs_Of_Moher_Panorama_Clare_Ireland_Landscape_Photography_%28221392087%29.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+/* Added image as a background 
+CSS background-image Property, Retrieved on 20 March 2023 from https://www.w3schools.com/cssref/pr_background-image.php*/
+
+.home-text{
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.home-title{
+    font-size: 3.3rem;
+}
+
+.home-subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
+/*Filter section*/
+
+
+.post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem; /*Adding spacing between each element*/
+    margin-top: 2rem !important; /* !important rule, will override ALL previous styling rules for this element*/
+}
+
+.filter-item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor:pointer; /*cursor changes to pointer when hovering over filter items*/
+}
+
+.active-filter{  /*filter item, All, will having different background to indicate the filter has been clicked on*/
+    background-color: var(--second-color);
+    color: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+
+/*Post section*/
+
+
+.post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto)); /*repeatedly auto-fits the posts next to each other into a column (min size 280px) and max size is auto*/
+    justify-content: center;
+    gap: 1.5rem; /*spacing between posts*/
+}
+/* grid-template-columns - CSS: Cascading Style Sheets: MDN, CSS: Cascading Style Sheets | MDN, Retrieved on 20 March 2023 from: 
+https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+
+.post-box{
+    background: var(--bg-color);
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% /10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /*properties below will ensure title stays in 2 lines*/
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; /*Limits display to 2 lines*/
+    -webkit-box-orient: vertical; /*elements to be displayed vertically*/
+    overflow: hidden; /*hides extra text that exceedes 2 lines*/
+}
+/*webkit properties are not recommended as they do not support every browser but this is the best solution so far
+line-clamp: CSS-Tricks, CSS-Tricks, Retrieved on 20 March 2023 from : https://css-tricks.com/almanac/properties/l/line-clamp/
+*/
+
+.post-date{
+    display: flex;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px; /*Allow spacing from title elements*/
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem; /*Spacing between lines has been increased*/
+    margin: 5px 0 10px;
+    /*properties below will ensure description stays in 3 lines*/
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.profile-name{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+
+
+/*Subscribe form*/
+
+.subscribe-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    font-size: 1rem;
+    background: var(--text-color);
+    color: var(--second-color);
+    padding: 1rem;
+}
+
+/*Footer section*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer p{
+    font-size: 0.9rem;
+}
+
+.about-us{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx{
+    font-size: 1.4rem; /*increased the icon size*/
+    color: var(--text-color); /*icon color changed*/
+}
+
+.social .bx:hover{ /*color of icons will change when hovering over them*/
+    color: var(--second-color); 
+    transition: 0.3s all linear; /*linear value will result in transition effect with the same speed from start to end*/
+}
+
+/*Like button*/
+
+/* After clicking the like button, the button will remain green until clicked again */
+.liked {
+    background-color: #09e73a;
+    border-radius: 20%;
+}
+/* Color of like icon will stay black when user hovers */
+.liked .bx:hover{
+    color: var(--text-color)
+}
+
+
+/*Post page*/
+
+/*Post header*/
+.post-header{
+    width: 100%;
+    height: 500px;
+    background: var(--container-color);
+}
+
+.post-container{  /*Centered the post*/
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column; /*property ensures items are displayed vertically in a column*/
+    align-items: center;
+    margin-top: 4rem !important;
+}
+
+.back-home{
+    color: var(--second-color);
+    font-size: 0.9rem;
+}
+
+.header-title{
+ width: 90%; /*Prevents header from exceeding width of image*/
+ font-size: 2.6rem;
+ color: var(--bg-color);
+ text-align: center;
+ margin-bottom: 1rem;   
+}
+
+.header-img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover; /*image keeps its aspect ratio and fills the given dimension*/
+    object-position: center;
+}
+
+
+/*Post content*/
+
+.post-content{
+    margin-top: 10rem !important;
+}
+
+.sub-heading{
+    font-size: 1.2rem;
+}
+
+.post-text{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    text-align: justify; /*Stretches the lines so that each line has equal width */
+}
+
+.list-items{
+    margin-left: 2rem;
+    text-align: left;
+    line-height: 1.7rem;
+}
+
+/*Table section*/
+
+ .table-contents{
+        margin-top: -3rem !important;
+    }
+
+.table-contents, th, td {
+    border: 1px solid var(--bg-color);
+    border-collapse: collapse;
+    width:100%;
+    padding: 0.8rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.8rem;
+}
+
+/*HTML Table Borders, w3Shools, Retrieved on 21 March 2023 from https://www.w3schools.com/html/html_table_borders.asp
+*/
+
+.link{
+    padding: 8px 14px;
+    text-transform: uppercase; 
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: var(--second-color);  
+    color: var(--bg-color); 
+}
+
+.link:hover {
+    background: hsl(117, 95%, 14%); 
+    transition: 0.3s; 
+}
+
+
+/*Author section*/
+
+.extra-header{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+summary::marker {
+  content: "";
+}
+
+/*Learnt above property from stack overflow to remove arrow from summary element 
+How to remove the arrow on the side of the summary element,stackoverflow, Luca De Nardi Retrieved on 21 March 2023 from https://stackoverflow.com/questions/60829427/how-to-remove-the-arrow-on-the-side-of-the-summary-element
+*/
+
+.author-link{
+    font-size: 0.9rem;
+    color: var(--second-color); 
+    transition: 0.3s;
+}
+
+.quote{
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*Share section*/
+
+.share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.share-title{
+    font-size: 1rem;
+}
+
+/* Save for later page */
+
+.saved-title{
+    line-height: 3rem;
+    box-shadow:  8px 8px 8px 8px #888888;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /*properties below will ensure title stays in 2 lines*/
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; /*Limits display to 2 lines*/
+    -webkit-box-orient: vertical; /*elements to be displayed vertically*/
+    overflow: hidden; /*hides extra text that exceedes 2 lines*/
+}
+
+.saved-title:hover{
+    color: var(--second-color);
+}
+
+.save-button{ 
+    background-color:#09e73a; 
+    color: var(--text-color)
+}
+
+
+/*Responsive properties using Devtools*/
+
+
+@media (max-width: 1060px) {
+    .container{
+        margin: 0 auto;
+        width:95%
+    }
+    .home-text{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:805px) {
+    .nav {
+    padding: 6px;
+    }
+    .post-container {
+    margin: 0 auto;
+    width: 95%;
+    } 
+}
+
+@media (max-width:768px) {
+    section{
+        padding: 2rem 0;
+    }
+    .home {
+    min-height: 395px;
+    }
+    .header-content{
+        margin-top: 3rem !important;
+    }
+    .post-content {
+        margin-top: 7rem !important;
+    }
+    .home-title {
+        font-size: 3rem;
+    }
+    .header-title{
+        font-size: 2rem;
+    }
+    .header-img {
+        height: 368px;
+    }
+    .post-header {
+        height: 450px;
+    }
+}
+
+@media (max-width:395px){
+    .header-img {
+        height: 240px;
+    }
+    .home-title{
+        font-size: 2rem;
+    }
+    .home-subtitle {
+        font-size: 0.9rem;
+    }
+    .home {
+        min-height: 300px;
+        background: var(--text-color); /*Changed background as image was not visible */
+    }
+    .post-filter {
+        column-gap: 1.2rem;
+    }
+    .post-box{
+        padding: 10px;
+    }
+    .header-title{
+        font-size: 1.4rem;
+    }
+    .post-header{
+        height: 335px;
+    }
+    .post-content{
+        margin-top: 5rem !important;
+    }
+    .sub-heading{
+        font-size: 1.1rem;
+    }
+    .post-text{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin: 0.8rem 0;
+    }
+    .subscribe-form{
+        font-size: 0.85rem;
+        
+    }
+    #exampleInputEmail1{
+        font-size: 0.8rem;
+    }
+    .btn-primary{
+        font-size: 0.8rem;
+    }
+    .list-items{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        padding-left: 1rem;
+    }
+    .share-title{
+        margin-top: 4rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+   
+}
+
+/*Learnt how to use DevTools to setup responsive properties whilst testing
+Simulate mobile devices with Device Mode, Chrome Developers, Retrieved on 21 March 2023 from: https://developer.chrome.com/docs/devtools/device-mode/
+*/
+

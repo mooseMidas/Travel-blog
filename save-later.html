@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <!--Style sheet -->
+    <link rel="stylesheet" href="myStyle.css"> 
+    <!--used Boxicons CSS link for styling/icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body onload="getSave()">
+    <header>
+    <div class="nav container">
+        <!--Logo-->
+        <a href="#" class="logo">Bucket <span>List</span></a>
+        <!--Number of saved articles will be displayed here-->
+        <a href="#" class="save-later">Saved: <span id="saved-amount"></span></a>
+    </div>
+    </header>
+
+    <!--Break header-->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title"> Bucket List</h2>
+            <!--Back to home option-->
+            <a href="index.html" class="back-home">Back to Home</a>
+        </div>
+    </section>
+    <!--Post Filter-->
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span> <!--data-filter used to filter div elements. active-filter class defines current page-->
+        <span class="filter-item" data-filter="latest">Latest</span>
+        <span class="filter-item" data-filter="local">Local Travel</span>
+        <span class="filter-item" data-filter="international">International Travel</span>
+        
+    </div>
+
+
+    <!-- Saved articles will be appended to below section -->
+    <section class="post-container">
+        <h1>Saved Artcles:</h1>
+        <div id="saved-items">
+            
+        </div>
+    </section>
+        
+
+    <!--Subscribe form-->
+    <div class="subscribe-form container">
+        <label for="exampleInputEmail1">Subscribe to our newsletter</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer container">
+        <p>Copyright details etc</p>
+        <a href="about-us.html" class="about-us"> <!--Link to About us page-->
+           <p>About Us</p>
+        </a>
+        <!--Social media icons/links retrieved from Boxicons-->
+        <div class="social">
+           <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i> </a>
+        </div>
+    </div>
+    <script src="saveLater.js"></script>
+</body>
+</html>
+
+
+<!--Most of this HTML and CSS code is based on a youtube tutorial and w3Schools definitions
+
+Create a Responsive Blog Website Using HTML CSS JavaScript And jQuery, CarpoolVenom, Retrieved on 20 March 2023 from https://www.youtube.com/watch?v=gZHjMVE_e10&t=2676s 
+Forms, Mark Otto Retrieved on 16 March 2023 from https://getbootstrap.com/docs/4.2/components/forms/
+
+-->
